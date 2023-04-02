@@ -18,7 +18,7 @@ i = 1
 for (x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
     
-    # обрезать и сохранить найденные лица
+    # обрезать и сохранить найденные лица в папку Faces
     cropped = img[y:y+h, x:x+w]
     cv2.imwrite(".\Faces\im" + str(i) + ".jpg", cropped)
     
@@ -28,8 +28,3 @@ for (x, y, w, h) in faces:
 
 cv2.imshow('img', img)
 cv2.waitKey()
-
-
-
-
-
